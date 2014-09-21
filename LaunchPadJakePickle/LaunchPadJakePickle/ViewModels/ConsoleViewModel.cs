@@ -9,7 +9,7 @@ namespace LaunchPadJakePickle.ViewModels
 
     using Models;
 
-    class ConsoleViewModel
+    class ConsoleViewModel : Caliburn.Micro.PropertyChangedBase
     {
         private ConsoleModel model = new ConsoleModel();
     }
