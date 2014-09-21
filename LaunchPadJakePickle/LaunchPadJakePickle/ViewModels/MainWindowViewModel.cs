@@ -9,7 +9,7 @@ namespace LaunchPadJakePickle.ViewModels
 
     using Models;
 
-    class MainWindowViewModel
+    class MainWindowViewModel : Caliburn.Micro.PropertyChangedBase
     {
         private MainWindowModel Model = new MainWindowModel();
     }
