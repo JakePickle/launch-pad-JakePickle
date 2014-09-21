@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LaunchPadJakePickle.ViewModels
 {
+
+    using Models;
+
     class MainWindowViewModel
     {
+        private MainWindowModel Model = new MainWindowModel();
     }
 }
