@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LaunchPadJakePickle.ViewModels
 {
+
+    using Models;
+
     class ConsoleViewModel
     {
+        private ConsoleModel model = new ConsoleModel();
     }
 }
