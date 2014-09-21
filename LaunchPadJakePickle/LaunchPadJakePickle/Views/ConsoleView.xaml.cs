@@ -13,20 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LaunchPadJakePickle
+namespace LaunchPadJakePickle.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ConsoleView.xaml
     /// </summary>
 
     using ViewModels;
 
-    public partial class MainWindow : Window
+    public partial class ConsoleView : UserControl
     {
-        public MainWindow()
+        public ConsoleView()
         {
             InitializeComponent();
-            this.DataContext = new MainWindowViewModel();
+            this.DataContext = new ConsoleViewModel();
         }
     }
 }
