@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LaunchPadJakePickle.Models;
+using Caliburn.Micro.PropertyChangedBase;
 
 namespace LaunchPadJakePickle.ViewModels
 {
-
-    using Models;
-
-    class ConsoleViewModel : Caliburn.Micro.PropertyChangedBase
+    class ConsoleViewModel
     {
-        private ConsoleModel model = new ConsoleModel();
+        private ConsoleModel Model;
+        private ConsoleViewModel()
+        {
+            Model = new ConsoleModel();
+        }
+        
     }
 }
