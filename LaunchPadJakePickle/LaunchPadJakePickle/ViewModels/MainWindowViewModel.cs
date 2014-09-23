@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LaunchPadJakePickle.Models;
-using Caliburn.Micro.PropertyChangedBase;
+using Caliburn.Micro;
 
 namespace LaunchPadJakePickle.ViewModels
 {
