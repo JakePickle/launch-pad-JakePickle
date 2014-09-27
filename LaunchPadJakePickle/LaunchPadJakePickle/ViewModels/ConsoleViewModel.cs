@@ -23,6 +23,7 @@ namespace LaunchPadJakePickle.ViewModels
         public ConsoleViewModel()
         {
             Model = new ConsoleModel();
+            Text = "some arbitrary text.";
         }
         
     }
