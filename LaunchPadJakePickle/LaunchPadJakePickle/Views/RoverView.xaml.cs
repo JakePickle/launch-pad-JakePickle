@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using LaunchPadJakePickle.ViewModels;
 
 namespace LaunchPadJakePickle.Views
 {
@@ -10,6 +11,7 @@ namespace LaunchPadJakePickle.Views
         public RoverView()
         {
             InitializeComponent();
+            this.DataContext = new RoverViewModel();
         }
     }
 }
