@@ -21,6 +21,19 @@ namespace LaunchPadJakePickle.ViewModels
             }
         }
 
+        public RoverViewModel Rover
+        {
+            get
+            {
+                return Model.rover;
+            }
+            set
+            {
+                Model.rover = value;
+                NotifyOfPropertyChange(() => Model.rover);
+            }
+        }
+
         public MainWindowViewModel()
         {
             Model = new MainWindowModel();
