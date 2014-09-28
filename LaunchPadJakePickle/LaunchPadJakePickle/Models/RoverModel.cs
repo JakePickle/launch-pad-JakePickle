@@ -1,5 +1,4 @@
-﻿
-namespace LaunchPadJakePickle.Models
+﻿namespace LaunchPadJakePickle.Models
 {
     class RoverModel
     {
