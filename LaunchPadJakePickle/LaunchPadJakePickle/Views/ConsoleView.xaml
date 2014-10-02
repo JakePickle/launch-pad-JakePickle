@@ -6,6 +6,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <TextBlock x:Name="Text" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120" />
+            <RowDefinition Height="170" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170" />
+            <ColumnDefinition Width="120" />
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="Text" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" />
+        <Button x:Name="Clear" Grid.Column="1" Grid.Row="1" Width="Auto" Height="Auto" />
+        <Button x:Name="Connect" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" />
+        <Button x:Name="Disconnect" Grid.Column="1" Grid.Row="0" Width="Auto" Height="Auto" />
     </Grid>
+    
 </UserControl>
