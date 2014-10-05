@@ -20,6 +20,6 @@
         <TextBlock x:Name="speed" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" />
         <TextBlock x:Name="temperature" Grid.Column="0" Grid.Row="2" Width="Auto" Height="Auto" />
         <TextBlock x:Name="isConnected" Grid.Column="0" Grid.Row="4" Width="Auto" Height="Auto" />
-        <Button x:Name="Rove" Grid.Column="0" Grid.Row="3" Width="Auto" Height="Auto"/>
+        <Button x:Name="Rove" Grid.Column="0" Grid.Row="3" Width="Auto" Height="Auto" Content="Rove So Hard"/>
     </Grid>
 </UserControl>
