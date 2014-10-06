@@ -62,6 +62,7 @@ namespace LaunchPadJakePickle.ViewModels
         public RoverViewModel()
         {
             Model = new RoverModel();
+            Model.roverName = "something";
         }
 
         public void Rove()
