@@ -1,4 +1,5 @@
 ﻿using LaunchPadJakePickle.Models;
+using System.Threading.Tasks;
 using Caliburn.Micro;
 
 namespace LaunchPadJakePickle.ViewModels
@@ -67,7 +68,27 @@ namespace LaunchPadJakePickle.ViewModels
 
         public void Rove()
         {
-
+            if (isConnected)
+            {
+                Task.Run(async () =>
+                {
+                    // Something here
+                    for (var i = 0; i < 15; i++)
+                    {
+                        speed++;
+                        await Task.Delay(200);
+                    }
+                    for (var i = 14; i >= 0; i--)
+                    {
+                        speed--;
+                        await Task.Delay(200);
+                    }
+                });
+            }
+            else
+            {
+                // Something later
+            }
         }
     }
 }
