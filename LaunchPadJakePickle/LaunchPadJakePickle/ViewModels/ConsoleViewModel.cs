@@ -25,6 +25,21 @@ namespace LaunchPadJakePickle.ViewModels
             Model = new ConsoleModel();
             Text = "some arbitrary text.";
         }
+
+        public void Clear()
+        {
+            Text = string.Empty;
+        }
+
+        public void Connect()
+        {
+            Text += "Connected!" + System.Environment.NewLine;
+        }
+
+        public void Disconnect()
+        {
+            Text += "Disconnected!" + System.Environment.NewLine;
+        }
         
     }
 }
