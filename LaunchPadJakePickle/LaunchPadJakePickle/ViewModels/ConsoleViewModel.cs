@@ -35,11 +35,13 @@ namespace LaunchPadJakePickle.ViewModels
 
         public void Connect()
         {
+            MainViewModel.Rover.isConnected = true;
             Print("Connected!");
         }
 
         public void Disconnect()
         {
+            MainViewModel.Rover.isConnected = false;
             Print("Disconnected!");
         }
 
