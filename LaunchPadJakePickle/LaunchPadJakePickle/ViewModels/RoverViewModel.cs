@@ -72,14 +72,16 @@ namespace LaunchPadJakePickle.ViewModels
             {
                 Task.Run(async () =>
                 {
-                    // Something here
+                    temperature = 50;
                     for (var i = 0; i < 15; i++)
                     {
                         speed++;
+                        temperature += speed / 4;
                         await Task.Delay(200);
                     }
                     for (var i = 14; i >= 0; i--)
                     {
+                        temperature -= speed / 4;
                         speed--;
                         await Task.Delay(200);
                     }
