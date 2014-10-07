@@ -25,7 +25,7 @@ namespace LaunchPadJakePickle.ViewModels
         {
             MainViewModel = MainWinViewModel;
             Model = new ConsoleModel();
-            Text = "some arbitrary text.";
+            Print("some arbitrary text.");
         }
 
         public void Clear()
@@ -35,12 +35,18 @@ namespace LaunchPadJakePickle.ViewModels
 
         public void Connect()
         {
-            Text += "Connected!" + System.Environment.NewLine;
+            Print("Connected!");
         }
 
         public void Disconnect()
         {
-            Text += "Disconnected!" + System.Environment.NewLine;
+            Print("Disconnected!");
+        }
+
+        public void Print(string str)
+        {
+            Text += str + System.Environment.NewLine;
+            return;
         }
         
     }
