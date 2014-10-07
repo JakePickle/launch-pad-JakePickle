@@ -6,7 +6,8 @@ namespace LaunchPadJakePickle.ViewModels
 {
     class RoverViewModel : PropertyChangedBase
     {
-        private RoverModel Model;      
+        private RoverModel Model;
+        private MainWindowViewModel MainViewModel;
 
         public string roverName
         {
@@ -60,8 +61,9 @@ namespace LaunchPadJakePickle.ViewModels
             }
         }
 
-        public RoverViewModel()
+        public RoverViewModel(MainWindowViewModel MainWinViewModel)
         {
+            MainViewModel = MainWinViewModel;
             Model = new RoverModel();
             Model.roverName = "something";
         }

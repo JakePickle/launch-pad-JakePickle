@@ -11,7 +11,6 @@ namespace LaunchPadJakePickle.Views
         public RoverView()
         {
             InitializeComponent();
-            this.DataContext = new RoverViewModel();
         }
     }
 }

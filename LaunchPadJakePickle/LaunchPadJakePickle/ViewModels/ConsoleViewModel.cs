@@ -6,6 +6,7 @@ namespace LaunchPadJakePickle.ViewModels
     class ConsoleViewModel : PropertyChangedBase
     {
         private ConsoleModel Model;
+        private MainWindowViewModel MainViewModel;
 
         public string Text
         {
@@ -20,8 +21,9 @@ namespace LaunchPadJakePickle.ViewModels
             }
         }
 
-        public ConsoleViewModel()
+        public ConsoleViewModel(MainWindowViewModel MainWinViewModel)
         {
+            MainViewModel = MainWinViewModel;
             Model = new ConsoleModel();
             Text = "some arbitrary text.";
         }
