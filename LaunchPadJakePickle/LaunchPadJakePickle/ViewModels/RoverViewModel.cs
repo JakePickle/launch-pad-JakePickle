@@ -72,6 +72,7 @@ namespace LaunchPadJakePickle.ViewModels
         {
             if (isConnected)
             {
+                MainViewModel.Console.Print("Roving Started!");
                 Task.Run(async () =>
                 {
                     temperature = 50;
@@ -88,10 +89,11 @@ namespace LaunchPadJakePickle.ViewModels
                         await Task.Delay(200);
                     }
                 });
+                MainViewModel.Console.Print("Roving Completed!");
             }
             else
             {
-                // Something later
+                MainViewModel.Console.Print("Roving Failed, Not Connected");
             }
         }
     }
