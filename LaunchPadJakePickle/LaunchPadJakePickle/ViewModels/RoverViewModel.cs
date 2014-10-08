@@ -1,11 +1,13 @@
 ﻿using LaunchPadJakePickle.Models;
+using System.Threading.Tasks;
 using Caliburn.Micro;
 
 namespace LaunchPadJakePickle.ViewModels
 {
     class RoverViewModel : PropertyChangedBase
     {
-        private RoverModel Model;      
+        private RoverModel Model;
+        private MainWindowViewModel MainViewModel;
 
         public string roverName
         {
@@ -59,14 +61,40 @@ namespace LaunchPadJakePickle.ViewModels
             }
         }
 
-        public RoverViewModel()
+        public RoverViewModel(MainWindowViewModel MainWinViewModel)
         {
+            MainViewModel = MainWinViewModel;
             Model = new RoverModel();
+            Model.roverName = "something";
         }
 
         public void Rove()
         {
-
+            if (isConnected)
+            {
+                MainViewModel.Console.Print("Roving Started!");
+                Task.Run(async () =>
+                {
+                    temperature = 50;
+                    for (var i = 0; i < 15; i++)
+                    {
+                        speed++;
+                        temperature += speed / 4;
+                        await Task.Delay(200);
+                    }
+                    for (var i = 14; i >= 0; i--)
+                    {
+                        temperature -= speed / 4;
+                        speed--;
+                        await Task.Delay(200);
+                    }
+                });
+                MainViewModel.Console.Print("Roving Completed!");
+            }
+            else
+            {
+                MainViewModel.Console.Print("Roving Failed, Not Connected");
+            }
         }
     }
 }

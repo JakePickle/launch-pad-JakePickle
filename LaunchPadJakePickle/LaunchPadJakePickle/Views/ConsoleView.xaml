@@ -15,9 +15,9 @@
             <ColumnDefinition Width="120" />
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="Text" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" />
-        <Button x:Name="Clear" Grid.Column="1" Grid.Row="1" Width="Auto" Height="Auto" />
-        <Button x:Name="Connect" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" />
-        <Button x:Name="Disconnect" Grid.Column="1" Grid.Row="0" Width="Auto" Height="Auto" />
+        <Button x:Name="Clear" Grid.Column="1" Grid.Row="1" Width="Auto" Height="Auto" Content="Clear"/>
+        <Button x:Name="Connect" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Connect"/>
+        <Button x:Name="Disconnect" Grid.Column="1" Grid.Row="0" Width="Auto" Height="Auto" Content="Disconnect"/>
     </Grid>
     
 </UserControl>
