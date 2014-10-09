@@ -16,7 +16,8 @@
             <ColumnDefinition Width="75*" />
             <ColumnDefinition Width="225*" />
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="Text" Grid.Column="1" Grid.Row="0" Width="Auto" Height="Auto" Background="Black" Foreground="WhiteSmoke" Grid.RowSpan="4" Margin="1"/>
+        <TextBox x:Name="Text" Grid.Column="1" Grid.Row="0" Width="Auto" Height="Auto" Background="Black" Foreground="WhiteSmoke" 
+                 Grid.RowSpan="4" Margin="1" VerticalScrollBarVisibility="Auto"/>
         <Button x:Name="Clear" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" Content="Clear" Margin="1"/>
         <Button x:Name="Connect" Grid.Column="0" Grid.Row="2" Width="Auto" Height="Auto" Content="Connect" Margin="1"/>
         <Button x:Name="Disconnect"  Grid.Column="0" Grid.Row="3" Width="Auto" Height="Auto" Content="Disconnect" Margin="1"/>
