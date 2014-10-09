@@ -30,7 +30,7 @@ namespace LaunchPadJakePickle.ViewModels
 
         public void Clear()
         {
-            Text = "Rover Output Console";
+            Text = "Rover Output Console" + System.Environment.NewLine;
         }
 
         public void Connect()
