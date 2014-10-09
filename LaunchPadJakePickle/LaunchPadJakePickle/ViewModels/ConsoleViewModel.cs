@@ -21,6 +21,19 @@ namespace LaunchPadJakePickle.ViewModels
             }
         }
 
+        public string roverNameConsole
+        {
+            get
+            {
+                return MainViewModel.Rover.roverName+"\nConsole";
+            }
+            set
+            {
+                Model.roverNameConsole = MainViewModel.Rover.roverName+"\nConsole";
+                NotifyOfPropertyChange(() => Model.roverNameConsole);
+            }
+        }
+
         public ConsoleViewModel(MainWindowViewModel MainWinViewModel)
         {
             MainViewModel = MainWinViewModel;
