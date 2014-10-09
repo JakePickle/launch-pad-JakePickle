@@ -19,7 +19,7 @@
         <TextBlock x:Name="roverName" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" />
         <TextBlock x:Name="speedStr" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" />
         <TextBlock x:Name="temperatureStr" Grid.Column="0" Grid.Row="2" Width="Auto" Height="Auto" />
-        <TextBlock x:Name="isConnected" Grid.Column="0" Grid.Row="4" Width="Auto" Height="Auto" />
+        <TextBlock x:Name="isConnectedStr" Grid.Column="0" Grid.Row="4" Width="Auto" Height="Auto" />
         <Button x:Name="Rove" Grid.Column="0" Grid.Row="3" Width="Auto" Height="Auto" Content="Rove So Hard"/>
     </Grid>
 </UserControl>

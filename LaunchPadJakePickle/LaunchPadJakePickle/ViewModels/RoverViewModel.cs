@@ -48,6 +48,19 @@ namespace LaunchPadJakePickle.ViewModels
             }
         }
 
+        public string isConnectedStr
+        {
+            get
+            {
+                return Model.isConnectedStr;
+            }
+            set
+            {
+                Model.isConnectedStr = "Connected: " + value;
+                NotifyOfPropertyChange(() => Model.isConnectedStr);
+            }
+        }
+
         public bool isConnected
         {
             get
@@ -70,6 +83,7 @@ namespace LaunchPadJakePickle.ViewModels
 
         public void Rove()
         {
+            bool isConnected = Model.isConnected;
             if (isConnected)
             {
                 MainViewModel.Console.Print("Roving Started!");
