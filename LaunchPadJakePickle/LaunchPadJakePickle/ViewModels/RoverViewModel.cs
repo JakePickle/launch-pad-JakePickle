@@ -131,8 +131,8 @@ namespace LaunchPadJakePickle.ViewModels
                         speed--;
                         await Task.Delay(200);
                     }
-                });
-                MainViewModel.Console.Print("Roving Completed!");
+                    MainViewModel.Console.Print("Roving Completed!");
+                });         
             }
             else
             {
