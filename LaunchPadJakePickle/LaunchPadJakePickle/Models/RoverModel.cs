@@ -9,5 +9,6 @@
         internal int speed = 0;
         internal double temperature;
         internal bool isConnected = false;
+        internal string roverStatus = string.Empty;
     }
 }
