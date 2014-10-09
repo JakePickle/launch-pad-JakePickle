@@ -43,8 +43,36 @@ namespace LaunchPadJakePickle.ViewModels
             }
             set
             {
-                Model.temperatureStr = "Temperature: " + value;
+                Model.temperatureStr = "Temperature: " + value + " units";
                 NotifyOfPropertyChange(() => Model.temperatureStr);
+            }
+        }
+
+        public int speed
+        {
+            get
+            {
+                return Model.speed;
+            }
+            set
+            {
+                Model.speed = value;
+                speedStr = "" + speed;
+                NotifyOfPropertyChange(() => Model.speed);
+            }
+        }
+
+        public double temperature
+        {
+            get
+            {
+                return Model.temperature;
+            }
+            set
+            {
+                Model.temperature = value;
+                temperatureStr = "" + temperature;
+                NotifyOfPropertyChange(() => Model.temperature);
             }
         }
 
@@ -70,6 +98,7 @@ namespace LaunchPadJakePickle.ViewModels
             set
             {
                 Model.isConnected = value;
+                isConnectedStr = "" + value;
                 NotifyOfPropertyChange(() => Model.isConnected);
             }
         }
@@ -89,8 +118,7 @@ namespace LaunchPadJakePickle.ViewModels
                 MainViewModel.Console.Print("Roving Started!");
                 Task.Run(async () =>
                 {
-                    double temperature = 50;
-                    int speed = 0;
+                    temperature = 50;
                     for (var i = 0; i < 15; i++)
                     {
                         speed++;
