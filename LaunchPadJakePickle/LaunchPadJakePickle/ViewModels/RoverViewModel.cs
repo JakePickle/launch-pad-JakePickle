@@ -82,7 +82,7 @@ namespace LaunchPadJakePickle.ViewModels
         {
             MainViewModel = MainWinViewModel;
             Model = new RoverModel();
-            roverName = "Rovernamehere";
+            roverName = "Rovername";
         }
 
         public void Rove()
