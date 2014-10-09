@@ -21,7 +21,6 @@
         <Button x:Name="Clear" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" Content="Clear" Margin="1"/>
         <Button x:Name="Connect" Grid.Column="0" Grid.Row="2" Width="Auto" Height="Auto" Content="Connect" Margin="1"/>
         <Button x:Name="Disconnect"  Grid.Column="0" Grid.Row="3" Width="Auto" Height="Auto" Content="Disconnect" Margin="1"/>
-        <TextBlock x:Name="roverNameConsole" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Margin="1" FontSize="14"/>
     </Grid>
 
 </UserControl>
