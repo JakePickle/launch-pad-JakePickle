@@ -7,17 +7,18 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="120" />
-            <RowDefinition Height="170" />
+            <RowDefinition Height="100*" />
+            <RowDefinition Height="100*" />
+            <RowDefinition Height="100*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="170" />
-            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="75*" />
+            <ColumnDefinition Width="225*" />
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="Text" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" Background="Black" Foreground="WhiteSmoke"/>
-        <Button x:Name="Clear" Grid.Column="1" Grid.Row="1" Width="Auto" Height="Auto" Content="Clear"/>
-        <Button x:Name="Connect" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Connect"/>
-        <Button x:Name="Disconnect" Grid.Column="1" Grid.Row="0" Width="Auto" Height="Auto" Content="Disconnect"/>
+        <TextBlock x:Name="Text" Grid.Column="1" Grid.Row="0" Width="Auto" Height="Auto" Background="Black" Foreground="WhiteSmoke" Grid.RowSpan="3" Margin="1"/>
+        <Button x:Name="Clear" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Clear" Margin="1"/>
+        <Button x:Name="Connect" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" Content="Connect" Margin="1"/>
+        <Button x:Name="Disconnect"  Grid.Column="0" Grid.Row="2" Width="Auto" Height="Auto" Content="Disconnect" Margin="1"/>
     </Grid>
-    
+
 </UserControl>
