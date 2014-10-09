@@ -17,7 +17,7 @@ namespace LaunchPadJakePickle.ViewModels
             }
             set
             {
-                Model.roverName = value;
+                Model.roverName = "Rover Name: " + value;
                 NotifyOfPropertyChange(() => Model.roverName);
             }
         }
@@ -65,7 +65,7 @@ namespace LaunchPadJakePickle.ViewModels
         {
             MainViewModel = MainWinViewModel;
             Model = new RoverModel();
-            Model.roverName = "something";
+            roverName = "Rovernamehere";
         }
 
         public void Rove()
