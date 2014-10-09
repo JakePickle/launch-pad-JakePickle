@@ -17,7 +17,7 @@ namespace LaunchPadJakePickle.ViewModels
             }
             set
             {
-                Model.roverName = "Rover Name: " + value;
+                Model.roverName = "Rover Name: " + value + "\n\n\nRover Status: ";
                 NotifyOfPropertyChange(() => Model.roverName);
             }
         }
