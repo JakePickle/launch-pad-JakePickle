@@ -7,15 +7,14 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
+            <RowDefinition Height="225"/>
             <RowDefinition Height="75"/>
-            <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="roverStatus" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" />
-        <TextBlock x:Name="isConnectedStr" Grid.Column="0" Grid.Row="4" Width="Auto" Height="Auto" />
+        <TextBlock x:Name="roverStatus" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" FontSize="16"/>
+        <TextBlock x:Name="isConnectedStr" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" />
         <Button x:Name="Rove" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" Content="Begin Roving"/>
     </Grid>
 </UserControl>
