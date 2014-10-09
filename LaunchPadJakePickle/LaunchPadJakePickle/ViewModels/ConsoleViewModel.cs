@@ -25,12 +25,12 @@ namespace LaunchPadJakePickle.ViewModels
         {
             MainViewModel = MainWinViewModel;
             Model = new ConsoleModel();
-            Print("some arbitrary text.");
+            Print("Rover Output Console");
         }
 
         public void Clear()
         {
-            Text = string.Empty;
+            Text = "Rover Output Console" + System.Environment.NewLine;
         }
 
         public void Connect()

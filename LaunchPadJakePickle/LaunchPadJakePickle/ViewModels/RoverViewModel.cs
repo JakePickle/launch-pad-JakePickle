@@ -17,8 +17,34 @@ namespace LaunchPadJakePickle.ViewModels
             }
             set
             {
-                Model.roverName = value;
+                Model.roverName = "Rover Name: " + value + "\n\n\nRover Status: ";
                 NotifyOfPropertyChange(() => Model.roverName);
+            }
+        }
+
+        public string speedStr
+        {
+            get
+            {
+                return Model.speedStr;
+            }
+            set
+            {
+                Model.speedStr = "Speed: " + value + " units";
+                NotifyOfPropertyChange(() => Model.speedStr);
+            }
+        }
+
+        public string temperatureStr
+        {
+            get
+            {
+                return Model.temperatureStr;
+            }
+            set
+            {
+                Model.temperatureStr = "Temperature: " + value + " units";
+                NotifyOfPropertyChange(() => Model.temperatureStr);
             }
         }
 
@@ -31,6 +57,7 @@ namespace LaunchPadJakePickle.ViewModels
             set
             {
                 Model.speed = value;
+                speedStr = "" + speed;
                 NotifyOfPropertyChange(() => Model.speed);
             }
         }
@@ -44,7 +71,21 @@ namespace LaunchPadJakePickle.ViewModels
             set
             {
                 Model.temperature = value;
+                temperatureStr = "" + temperature;
                 NotifyOfPropertyChange(() => Model.temperature);
+            }
+        }
+
+        public string isConnectedStr
+        {
+            get
+            {
+                return Model.isConnectedStr;
+            }
+            set
+            {
+                Model.isConnectedStr = "Connected: " + value;
+                NotifyOfPropertyChange(() => Model.isConnectedStr);
             }
         }
 
@@ -57,6 +98,7 @@ namespace LaunchPadJakePickle.ViewModels
             set
             {
                 Model.isConnected = value;
+                isConnectedStr = "" + value;
                 NotifyOfPropertyChange(() => Model.isConnected);
             }
         }
@@ -65,11 +107,12 @@ namespace LaunchPadJakePickle.ViewModels
         {
             MainViewModel = MainWinViewModel;
             Model = new RoverModel();
-            Model.roverName = "something";
+            roverName = "Rovernamehere";
         }
 
         public void Rove()
         {
+            bool isConnected = Model.isConnected;
             if (isConnected)
             {
                 MainViewModel.Console.Print("Roving Started!");
@@ -88,8 +131,8 @@ namespace LaunchPadJakePickle.ViewModels
                         speed--;
                         await Task.Delay(200);
                     }
-                });
-                MainViewModel.Console.Print("Roving Completed!");
+                    MainViewModel.Console.Print("Roving Completed!");
+                });         
             }
             else
             {
