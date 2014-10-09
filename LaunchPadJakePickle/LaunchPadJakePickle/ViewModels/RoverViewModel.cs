@@ -64,19 +64,6 @@ namespace LaunchPadJakePickle.ViewModels
             }
         }
 
-        public string isConnectedStr
-        {
-            get
-            {
-                return Model.isConnectedStr;
-            }
-            set
-            {
-                Model.isConnectedStr = "Connected: " + value;
-                NotifyOfPropertyChange(() => Model.isConnectedStr);
-            }
-        }
-
         public bool isConnected
         {
             get
@@ -86,8 +73,8 @@ namespace LaunchPadJakePickle.ViewModels
             set
             {
                 Model.isConnected = value;
-                isConnectedStr = "" + value;
                 NotifyOfPropertyChange(() => Model.isConnected);
+                NotifyOfPropertyChange(() => Model.roverStatus);
             }
         }
 
@@ -130,9 +117,10 @@ namespace LaunchPadJakePickle.ViewModels
 
         private string getRoverStatus()
         {
-            return roverName + " Status: \n"
-                + "Speed: " + speed + " units\n"
-                + "Temperature: " + temperature + " units";
+            return roverName + " Status: \n\n"
+                + "Speed: " + speed + " units\n\n"
+                + "Temperature: " + temperature + " units\n\n"
+                + "Connected: " + isConnected;
         }
     }
 }
