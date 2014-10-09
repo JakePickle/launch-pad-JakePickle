@@ -19,19 +19,7 @@ namespace LaunchPadJakePickle.ViewModels
             {
                 Model.roverName = value;
                 NotifyOfPropertyChange(() => Model.roverName);
-            }
-        }
-
-        public string speedStr
-        {
-            get
-            {
-                return Model.speedStr;
-            }
-            set
-            {
-                Model.speedStr = "Speed: " + value + " units";
-                NotifyOfPropertyChange(() => Model.speedStr);
+                NotifyOfPropertyChange(() => Model.roverStatus);
             }
         }
 
@@ -48,19 +36,6 @@ namespace LaunchPadJakePickle.ViewModels
             }
         }
 
-        public string temperatureStr
-        {
-            get
-            {
-                return Model.temperatureStr;
-            }
-            set
-            {
-                Model.temperatureStr = "Temperature: " + value + " units";
-                NotifyOfPropertyChange(() => Model.temperatureStr);
-            }
-        }
-
         public int speed
         {
             get
@@ -70,8 +45,8 @@ namespace LaunchPadJakePickle.ViewModels
             set
             {
                 Model.speed = value;
-                speedStr = "" + speed;
                 NotifyOfPropertyChange(() => Model.speed);
+                NotifyOfPropertyChange(() => Model.roverStatus);
             }
         }
 
@@ -84,8 +59,8 @@ namespace LaunchPadJakePickle.ViewModels
             set
             {
                 Model.temperature = value;
-                temperatureStr = "" + temperature;
                 NotifyOfPropertyChange(() => Model.temperature);
+                NotifyOfPropertyChange(() => Model.roverStatus);
             }
         }
 
@@ -155,7 +130,9 @@ namespace LaunchPadJakePickle.ViewModels
 
         private string getRoverStatus()
         {
-            return roverName + " Status: \n" + speedStr + "\n" + temperatureStr;
+            return roverName + " Status: \n"
+                + "Speed: " + speed + " units\n"
+                + "Temperature: " + temperature + " units";
         }
     }
 }
